@@ -18,6 +18,13 @@ var factorial = function(n) {
 // 2. Compute the sum of an array of integers.
 // sum([1,2,3,4,5,6]); // 21
 var sum = function(array) {
+    // Empty array input, equals 0
+    // Single integer arrays, equal single value inside array
+
+    // Sum integers inside array; works for positive and negative values
+    // Iterate over each value in the array
+    // reducing to a single value by taking the
+    // previous value and suming to the current value
 };
 
 // 3. Sum all numbers in an array containing nested arrays.
