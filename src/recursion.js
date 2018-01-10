@@ -34,19 +34,15 @@ var sum = function(array) {
 // 3. Sum all numbers in an array containing nested arrays.
 // arraySum([1,[2,3],[[4]],5]); // 15
 var arraySum = function(array) {
-  if (array.length <= 1) return sum(array);
+  if (!(array.length)) return 0;
+  if (array.length === 1) return Array.isArray(array[0]) ? arraySum(array[0]) : array[0];
   // Iterate over each value in the array
-  var newArray = array.map(function (elem) {
+  var newArray = array.map(elem => Array.isArray(elem) ? arraySum(elem) : elem
     // Detect if value is Array; if yes, then
-    if (Array.isArray(elem)) {
-      // invoke recursion on value
-      return arraySum(elem);
-    } else {
-      // if value not an Array, then
-      // return value into 'master array'
-      return elem;
-    }
-  });
+    // invoke recursion on value
+    // if value not an Array, then
+    // return value into 'master array'
+  );
   return sum(newArray);
   // Once array is all integers, then
   // sum all values; will try using
