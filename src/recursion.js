@@ -7,6 +7,9 @@
 // Example: 5! = 5 x 4 x 3 x 2 x 1 = 120
 // factorial(5); // 120
 var factorial = function(n) {
+    // For negative input, equal null
+    // For input 0 or 1, equal 1
+    // Assuming all other inputs positive integers, output is type number
 };
 
 // 2. Compute the sum of an array of integers.
