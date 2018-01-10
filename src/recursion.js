@@ -19,12 +19,16 @@ var factorial = function(n) {
 // sum([1,2,3,4,5,6]); // 21
 var sum = function(array) {
     // Empty array input, equals 0
+    if (!(array.length)) return 0;
     // Single integer arrays, equal single value inside array
-
+    if (array.length === 1) return array[0];
     // Sum integers inside array; works for positive and negative values
-    // Iterate over each value in the array
-    // reducing to a single value by taking the
-    // previous value and suming to the current value
+        // If array length is greater than 1, then
+            // Take the first value inside the array
+            // and add it to the recursion of calling
+            // the array excluding the current value
+            // so the array gets shorter during each
+            // call until the array is empty
 };
 
 // 3. Sum all numbers in an array containing nested arrays.
