@@ -23,12 +23,12 @@ var sum = function(array) {
     // Single integer arrays, equal single value inside array
     if (array.length === 1) return array[0];
     // Sum integers inside array; works for positive and negative values
-        // If array length is greater than 1, then
-            // Take the first value inside the array
-            // and add it to the recursion of calling
-            // the array excluding the current value
-            // so the array gets shorter during each
-            // call until the array is empty
+    return array[0] + sum(array.slice(1));
+      // Take the first value inside the array
+      // and add it to the recursion of calling
+      // the array excluding the current value
+      // so the array gets shorter during each
+      // call until the array is empty
 };
 
 // 3. Sum all numbers in an array containing nested arrays.
